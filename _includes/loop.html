@@ -1,0 +1,28 @@
+{% comment %} This is the post loop - each post will be output using this markup {% endcomment %}
+{% for post in paginator.posts %}
+<article class="post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>{{post.excerpt | strip_html | truncatewords: 40}} <a class="read-more" href="{{post.url | prepend: site.baseurl}}">&raquo;</a></p>
+    </section>
+    <footer class="post-meta">
+        {% if site.author.image %}<img class="author-thumb" src="{{site.author.image | prepend: site.baseurl}}" alt="Author image" nopin="nopin" />{% endif %}
+        {{site.author.name}}
+        {% if post.tags.size > 1 %} {{post.tags | array_to_sentence_string | prepend: " on "}} {% endif %}
+        <time class="post-date" datetime="{{post.date | date: '%-d %B %Y'}}">{{post.date | date: "%-d %B %Y"}}</time>
+    </footer>
+</article>
+{% endfor %}
+
+{% comment %}  Previous/next page links - displayed on every page {% endcomment %}
+<nav class="pagination" role="navigation">
+    {% if paginator.previous_page %}
+        <a class="newer-posts" href="{% if paginator.page == 2 %} {{"/" | prepend: site.baseurl}} {% else %} {{paginator.previous_page_path | prepend: site.baseurl}} {% endif %}">&larr; Newer Posts</a>
+    {% endif %}
+    <span class="page-number">Page {{paginator.page}} of {{paginator.total_pages}}</span>
+    {% if paginator.next_page %}
+        <a class="older-posts" href="{{paginator.next_page_path | prepend: site.baseurl}}">Older Posts &rarr;</a>
+    {% endif %}
+</nav>

@@ -1,0 +1,20 @@
+# Site settings
+title: Moe Ahmadi
+description: > # this means to ignore newlines until "baseurl:"
+  Full-stack web developer, passionate learner and creator
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://moeahmadi.com" # the base hostname & protocol for your site
+author:
+  name: Moe Ahmadi
+  image: /user-image.png
+  location: Ottawa, Canada
+  #website: http://moeahmadi.com
+#cover: "/user-cover.png"
+#logo:
+
+# Build settings
+markdown: kramdown
+paginate: 4
+paginate_path: "page/:num"
+permalink: /:title
+exclude: [Gemfile, Gemfile.lock, README.md]

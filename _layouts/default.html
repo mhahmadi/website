@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% comment %} Document Settings {% endcomment %}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {% comment %} Page Meta {% endcomment %}
+    <title>{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{"/assets/favicon.ico" | prepend: site.baseurl}}" type="image/x-icon">
+
+    {% comment %} Styles'n'Scripts {% endcomment %}
+    <link rel="stylesheet" type="text/css" href="{{"/assets/css/screen.css" | prepend: site.baseurl}}" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+</head>
+{% if paginator.previous_page %}
+    {% assign body_class = 'paged archive-template' %}
+{% else %}
+    {% assign body_class = page.body_class %}
+{% endif %}
+<body class="{{body_class}}">
+
+    {% comment %} Everything else gets inserted here {% endcomment %}
+    {{content}}
+
+    <footer class="site-footer clearfix">
+         <section class="copyright"><a href="{{"/" | prepend: site.baseurl}}">{{site.title}}</a> &copy; {{'now' | date: "%Y"}}</section>
+         <section class="poweredby">Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a></section>
+    </footer>
+
+    {% comment %} The main JavaScript file for Casper {% endcomment %}
+    <script type="text/javascript" src="{{"/assets/js/jquery.fitvids.js" | prepend: site.baseurl}}"></script>
+    <script type="text/javascript" src="{{"/assets/js/index.js" | prepend: site.baseurl}}"></script>
+
+</body>
+</html>

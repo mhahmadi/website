@@ -1,0 +1,27 @@
+---
+layout: default
+body_class: home-template
+---
+
+{% comment %} The big featured header {% endcomment %}
+<header class="main-header {% if site.cover %}" style="background-image: url({{site.baseurl}}{{site.cover}}){% else %}no-cover{% endif %}">
+    <nav class="main-nav overlay clearfix">
+        {% if site.logo %}<a class="blog-logo" href="{{"/" | prepend: site.baseurl}}"><img src="{{site.baseurl}}{{site.logo}}" alt="Blog Logo" /></a>{% endif %}
+        <a class="subscribe-button icon-feed" href="{{"/feed.xml" | prepend: site.baseurl}}">Subscribe</a>
+    </nav>
+    <div class="vertical">
+        <div class="main-header-content inner">
+            <h1 class="page-title">{{site.title}}</h1>
+            <h2 class="page-description">{{site.description}}</h2>
+        </div>
+    </div>
+    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+</header>
+
+{% comment %} The main content area on the homepage {% endcomment %}
+<main id="content" class="content" role="main">
+
+    {% comment %} The tag below includes the post loop - _includes/loop.html {% endcomment %}
+    {% include loop.html %}
+
+</main>
