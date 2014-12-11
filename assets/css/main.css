@@ -34,6 +34,42 @@ ul.social-links {
 }
 
 /* ==========================================================================
+	Bottom Navigation
+========================================================================== */
+
+.bottom-nav {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 10px 0;
+}
+
+.bottom-nav a {
+	font-family: 'Open Sans', sans-serif;
+	text-decoration: none;
+	display: inline-block;
+	padding: 0 10px;
+	line-height: 30px;
+	color: rgba(0,0,0,0.4);
+	border: rgba(0,0,0,0.3) 1px solid;
+	border-radius: 3px;
+	transition: all ease 0.3s;
+	cursor: pointer;
+	text-transform: uppercase;
+	margin: 0 1em 0 0;
+}
+
+.bottom-nav a:last-child {
+	margin: 0;
+}
+
+.bottom-nav a:hover {
+	color: rgba(0,0,0,0.4);
+	background: #FFF;
+}
+
+/* ==========================================================================
 	Animations
 ========================================================================== */
 
