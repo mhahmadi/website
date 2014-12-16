@@ -1,3 +1,6 @@
+---
+---
+
 /* ==========================================================================
 	Social Links
 ========================================================================== */
@@ -6,67 +9,66 @@ ul.social-links {
     list-style: none;
     padding: 0;
     margin: 1em;
+
+    li {
+        display: inline-block;
+        margin: 0 1em 0 0;
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: rgba(0,0,0,0.4);
+        &:hover {
+            color: rgba(0,0,0,0.8);
+            -webkit-animation: simple-bounce 2s;
+            animation: simple-bounce 2s;
+        }
+    }
+
+    body.home-template & {
+        -webkit-animation: fade-in-down 0.9s 0.1s;
+        animation: fade-in-down 0.9s 0.1s;
+    }
 }
 
-.social-links li {
-    display: inline-block;
-    margin: 0 1em 0 0;
-}
 
-.social-links li:last-child {
-    margin: 0;
-}
-
-.social-links a {
-    text-decoration: none;
-    color: rgba(0,0,0,0.4);
-}
-
-.social-links a:hover {
-    color: rgba(0,0,0,0.8);
-    -webkit-animation: simple-bounce 2s;
-    animation: simple-bounce 2s;
- }
-
-.home-template .social-links {
-    -webkit-animation: fade-in-down 0.9s 0.1s;
-    animation: fade-in-down 0.9s 0.1s;
-}
 
 /* ==========================================================================
 	Bottom Navigation
 ========================================================================== */
 
 .bottom-nav {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	padding: 10px 0;
-}
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
 
-.bottom-nav a {
-	font-family: 'Open Sans', sans-serif;
-	text-decoration: none;
-	display: inline-block;
-	padding: 0 10px;
-	line-height: 30px;
-	color: rgba(0,0,0,0.4);
-	border: rgba(0,0,0,0.3) 1px solid;
-	border-radius: 3px;
-	transition: all ease 0.3s;
-	cursor: pointer;
-	text-transform: uppercase;
-	margin: 0 1em 0 0;
-}
+    a {
+       font-family: 'Open Sans', sans-serif;
+       text-decoration: none;
+       display: inline-block;
+       padding: 0 10px;
+       line-height: 30px;
+       color: rgba(0,0,0,0.4);
+       border: rgba(0,0,0,0.3) 1px solid;
+       border-radius: 3px;
+       transition: all ease 0.3s;
+       cursor: pointer;
+       text-transform: uppercase;
+       margin: 0 1em 0 0;
 
-.bottom-nav a:last-child {
-	margin: 0;
-}
-
-.bottom-nav a:hover {
-	color: rgba(0,0,0,0.4);
-	background: #FFF;
+       &:last-child {
+            margin: 0;
+       }
+       &:hover {
+            color: rgba(0,0,0,0.4);
+            background: #FFF;
+       }
+    }
 }
 
 /* ==========================================================================
