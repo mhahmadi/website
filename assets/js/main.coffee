@@ -22,5 +22,11 @@
                 to = new Date($(@).data('to'))
                 toStr = to.toLocaleString('en-US', {year: 'numeric', month: 'short'})
             fromStr + ' - ' + toStr + ' (' + distanceInYearsAndMonths(to, from) + ')'
+    
+    $ ->
+        # initialize bootstrap's affix plugin for the nav element
+        $('.nav-col .nav').affix
+            offset:
+                top: $('.nav-col .nav').offset().top - 100
 
 ) jQuery
