@@ -22,11 +22,17 @@
                 to = new Date($(@).data('to'))
                 toStr = to.toLocaleString('en-US', {year: 'numeric', month: 'short'})
             fromStr + ' - ' + toStr + ' (' + distanceInYearsAndMonths(to, from) + ')'
-    
-    $ ->
+
         # initialize bootstrap's affix plugin for the nav element
         $('.nav-col .nav').affix
             offset:
                 top: $('.nav-col .nav').offset().top - 100
+
+        # smooth scroll for the nav
+        $(".nav-col .nav li a[href^='#']").on 'click', (e) ->
+            e.preventDefault() # prevent default anchor click behaviour
+            hash = @.hash
+            $('html, body').animate {scrollTop: $(@.hash).offset().top}, 200, ->
+                window.location.hash = hash #add hash to url (default click behaviour)
 
 ) jQuery
