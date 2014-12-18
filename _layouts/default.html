@@ -25,7 +25,7 @@
 {% else %}
     {% assign body_class = page.body_class %}
 {% endif %}
-<body class="{{body_class}}">
+<body class="{{body_class}}" data-spy="scroll" data-offset="20" data-target=".nav-col">
 
     {% comment %} Everything else gets inserted here {% endcomment %}
     {{content}}
@@ -39,6 +39,7 @@
     <script type="text/javascript" src="{{"/assets/js/jquery-1.11.1.js" | prepend: site.baseurl}}"></script>
     <script type="text/javascript" src="{{"/assets/js/jquery.fitvids.js" | prepend: site.baseurl}}"></script>
     <script type="text/javascript" src="{{"/assets/js/index.js" | prepend: site.baseurl}}"></script>
+    <script type="text/javascript" src="{{"/assets/js/bootstrap-3.3.1.js" | prepend: site.baseurl}}"></script>
     <script type="text/javascript" src="{{"/assets/js/main.js" | prepend: site.baseurl}}"></script>
 
 </body>
