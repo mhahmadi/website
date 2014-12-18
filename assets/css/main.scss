@@ -1,0 +1,114 @@
+---
+---
+
+/* ==========================================================================
+	Social Links
+========================================================================== */
+
+ul.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 1em;
+
+    li {
+        display: inline-block;
+        margin: 0 1em 0 0;
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: rgba(0,0,0,0.4);
+        &:hover {
+            color: rgba(0,0,0,0.8);
+            -webkit-animation: simple-bounce 2s;
+            animation: simple-bounce 2s;
+        }
+    }
+
+    body.home-template & {
+        -webkit-animation: fade-in-down 0.9s 0.1s;
+        animation: fade-in-down 0.9s 0.1s;
+    }
+}
+
+/* ==========================================================================
+	Bottom Navigation
+========================================================================== */
+
+.bottom-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+
+    a {
+       font-family: 'Open Sans', sans-serif;
+       text-decoration: none;
+       display: inline-block;
+       padding: 0 10px;
+       line-height: 30px;
+       color: rgba(0,0,0,0.4);
+       border: rgba(0,0,0,0.3) 1px solid;
+       border-radius: 3px;
+       transition: all ease 0.3s;
+       cursor: pointer;
+       text-transform: uppercase;
+       margin: 0 1em 0 0;
+
+       &:last-child {
+            margin: 0;
+       }
+       &:hover {
+            color: rgba(0,0,0,0.4);
+            background: #FFF;
+       }
+    }
+}
+
+/* ==========================================================================
+    Resume
+========================================================================== */
+
+@import 'resume';
+
+/* ==========================================================================
+	Animations
+========================================================================== */
+
+@-webkit-keyframes simple-bounce {
+    0%, 10%, 25%, 40%, 50% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+    20% {
+        -webkit-transform: translateY(-10px);
+                transform: translateY(-10px);
+    }
+    30% {
+        -webkit-transform: translateY(-5px);
+                transform: translateY(-5px);
+    }
+}
+
+@keyframes simple-bounce {
+    0%, 20%, 50%, 80%, 100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-10px);
+                transform: translateY(-10px);
+    }
+    60% {
+        -webkit-transform: translateY(-5px) rotate(-90deg);
+                transform: translateY(-5px) rotate(-90deg);
+    }
+}
+
+/* ==========================================================================
+	Do not add stuff below this point
+========================================================================== */
