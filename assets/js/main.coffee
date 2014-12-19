@@ -35,4 +35,10 @@
             $('html, body').animate {scrollTop: $(@.hash).offset().top}, 200, ->
                 window.location.hash = hash #add hash to url (default click behaviour)
 
+        # set enough margin on the last resume block for the scrollspy to work correcly for it (desktop screen only)
+        $('.content-block:last-child').css 'margin-bottom', window.innerHeight if window.innerWidth > 900
+        $(window).on 'resize', ->
+            if window.innerWidth > 900 then margin = window.innerHeight else margin = 0
+            $('.content-block:last-child').css 'margin-bottom',  margin
+
 ) jQuery
