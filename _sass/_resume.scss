@@ -15,9 +15,6 @@ body {
   }
   .content-block {
     @extend .abstract-block;
-    &:last-child {
-      margin: 0 0 800px 0;
-    }
   }
 
   .clearfix:after {
