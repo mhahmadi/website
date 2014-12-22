@@ -79,18 +79,21 @@ body {
     @extend .heading;
     font-size: 3rem;
   }
+  .header-type {
+    color: #888;
+  }
 
   hr {
     margin: 1rem 0;
     border-color: #666;
   }
 
-  .item-type {
-    color: #888;
-  }
   .item-meta {
     font-size: .9em;
     color: #888;
+  }
+  .item-emphasis {
+    font-weight: 600;
   }
   .item-desc {
     font-size: .9em;
@@ -135,7 +138,7 @@ body {
       font-size: 2rem;
     }
 
-    .header-block .item-type {
+    .header-type {
       display: none;
     }
 
