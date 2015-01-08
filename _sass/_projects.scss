@@ -1,0 +1,66 @@
+.projects-block {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 0 10px;
+
+  .project {
+
+    .image-container {
+      position: relative;
+
+      img {
+        filter: grayscale(1);
+        -webkit-filter: grayscale(1);
+        -moz-filter: grayscale(1);
+        -o-filter: grayscale(1);
+        opacity: 0.9;
+
+        transition: all 0.4s ease-out;
+        -webkit-transition: all 0.4s ease-out;
+        -moz-transition: all 0.4s ease-out;
+        -o-transition: all 0.4s ease-out;
+
+        &.thumbnail {
+          width: 100%;
+          border-radius: 10px;
+          margin-bottom: 10px;
+        }
+      }
+
+      & a {
+        position: absolute;
+        right: 0;
+        top: 0;
+        outline : none;
+      }
+
+      &:hover {
+        img {
+          filter: grayscale(0);
+          -webkit-filter: grayscale(0);
+          -moz-filter: grayscale(0);
+          -o-filter: grayscale(0);
+          opacity: 1;
+        }
+      }
+    }
+
+    h3, .tagline {
+      text-align: center;
+    }
+
+    .tagline {
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1.6rem;
+      text-align: justify;
+    }
+
+    i.fa {
+      margin-left: .5rem;
+    }
+
+  }
+}
