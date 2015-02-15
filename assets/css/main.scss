@@ -34,6 +34,14 @@ ul.social-links {
     }
 }
 
+@media only screen and (max-width: 400px) {
+  ul.social-links {
+    li {
+      margin: 0;
+    }
+  }
+}
+
 /* ==========================================================================
 	Bottom Navigation
 ========================================================================== */
@@ -73,12 +81,15 @@ ul.social-links {
     Footer
 ========================================================================== */
 
-.copyright {
-  width: 30%;
+.copyright, .poweredby {
+  width: auto;
 }
 
-.poweredby {
-  width: 70%;
+@media only screen and (max-width: 400px) {
+  .copyright, .poweredby {
+    text-align: center;
+    float: none;
+  }
 }
 
 /* ==========================================================================
